@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist';
+import { ItemModule } from './item/item.module';
 
 const entities = [];
 
@@ -19,7 +20,8 @@ const entities = [];
       database: process.env.DB_NAME,
       entities: entities,
       synchronize: true,
-    } as TypeOrmModuleOptions)
+    } as TypeOrmModuleOptions),
+    ItemModule,
   ],
   controllers: [],
   providers: [],
