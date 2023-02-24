@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist';
+import { Film } from './films/entities/film.entity';
 import { FilmsModule } from './films/films.module';
 
-const entities = [];
+const entities = [Film];
 
 @Module({
   imports: [
