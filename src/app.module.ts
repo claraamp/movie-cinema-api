@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist';
-import { ItemModule } from './item/item.module';
+import { FilmsModule } from './films/films.module';
 
 const entities = [];
 
@@ -21,7 +21,7 @@ const entities = [];
       entities: entities,
       synchronize: true,
     } as TypeOrmModuleOptions),
-    ItemModule,
+    FilmsModule,
   ],
   controllers: [],
   providers: [],
