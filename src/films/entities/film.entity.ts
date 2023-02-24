@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, UpdateDateColumn } from 'typeorm'
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 @Entity()
 export class Film extends BaseEntity {
     @PrimaryGeneratedColumn('uuid')
@@ -13,8 +13,8 @@ export class Film extends BaseEntity {
     @Column({ name: 'rating', type: 'int'})
     rating?: number;
 
-    @UpdateDateColumn({ name: 'updated_at' })
-    updatedAt: Date;
+    @Column({ name: 'year_launched', type: 'int' })
+    yearlaunched: number;
 
 
 
