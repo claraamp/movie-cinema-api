@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist';
 import { Film } from './films/entities/film.entity';
 import { FilmsModule } from './films/films.module';
+import { UserModule } from './user/user.module';
 
 const entities = [Film];
 
@@ -23,6 +24,7 @@ const entities = [Film];
       synchronize: true,
     } as TypeOrmModuleOptions),
     FilmsModule,
+    UserModule,
   ],
   controllers: [],
   providers: [],
