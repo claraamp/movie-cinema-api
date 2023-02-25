@@ -6,8 +6,9 @@ import { Film } from './films/entities/film.entity';
 import { FilmsModule } from './films/films.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { User } from './user/entities/user.entity';
 
-const entities = [Film];
+const entities = [Film, User];
 
 @Module({
   imports: [
