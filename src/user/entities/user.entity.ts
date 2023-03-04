@@ -20,6 +20,9 @@ export class User extends BaseEntity{
   @Column({ nullable: false })
   password: string;
 
+  @Column({ nullable: false, type: 'varchar', length: 20 })
+  role: string;
+
   @BeforeInsert()
   async hashPassword() {
     this.password = await bcrypt.hash(this.password, 8);
